@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+
+  <parent>
+    <artifactId>microservices</artifactId>
+    <groupId>com.stratio.architecture</groupId>
+    <version>1.9.0-SNAPSHOT</version>
+  </parent>
+
+  <groupId>com.stratio.integration.architecture</groupId>
+  <artifactId>stratio-microservices-integration-parent</artifactId>
+  <version>0.0.1-SNAPSHOT</version>
+  <packaging>pom</packaging>
+
+  <name>Stratio Microservices Integration Parent</name>
+  <description>Stratio Microservices Integration Parent</description>
+
+  <dependencies>
+    <dependency>
+      <groupId>com.stratio.architecture.microservices</groupId>
+      <artifactId>stratio-microservices-monitoring</artifactId>
+      <version>${project.parent.version}</version>
+    </dependency>
+    <dependency>
+      <groupId>com.stratio.architecture.microservices</groupId>
+      <artifactId>stratio-microservices-logging</artifactId>
+      <version>${project.parent.version}</version>
+    </dependency>
+    <dependency>
+      <groupId>org.springframework.boot</groupId>
+      <artifactId>spring-boot-starter</artifactId>
+    </dependency>
+  </dependencies>
+
+  <build>
+    <plugins>
+      <!-- Package as an executable jar -->
+      <plugin>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-maven-plugin</artifactId>
+        <executions>
+          <execution>
+            <goals>
+              <!-- Generate build information when the project was built -->
+              <goal>build-info</goal>
+              <goal>repackage</goal>
+            </goals>
+          </execution>
+        </executions>
+      </plugin>
+    </plugins>
+  </build>
+
+</project>
