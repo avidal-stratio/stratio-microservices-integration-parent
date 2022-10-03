@@ -67,13 +67,6 @@
         <version>${jackson.version}</version>
       </dependency>
 
-      <!-- MAPSTRUCT -->
-      <dependency>
-        <groupId>org.mapstruct</groupId>
-        <artifactId>mapstruct</artifactId>
-        <version>${mapstruct.version}</version>
-      </dependency>
-
       <!-- DATABASE -->
       <dependency>
         <groupId>org.postgresql</groupId>
@@ -171,6 +164,13 @@
       <groupId>org.projectlombok</groupId>
       <artifactId>lombok</artifactId>
       <optional>true</optional>
+    </dependency>
+
+    <!-- MAPSTRUCT -->
+    <dependency>
+      <groupId>org.mapstruct</groupId>
+      <artifactId>mapstruct</artifactId>
+      <version>${mapstruct.version}</version>
     </dependency>
 
     <!-- SPRINGFOX - SWAGGER -->
